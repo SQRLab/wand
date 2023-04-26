@@ -32,7 +32,7 @@ def get_config_path(args, name_suffix=""):
 
     home = str(Path.home())
     if sys.platform == "win32":
-        data_dir = os.path.join(home, "Documents", "LaserMonitor", "wand","configs")
+        data_dir = os.path.join(home, "AppData", "Local", "wand")
     elif sys.platform == "linux":
         data_dir = os.path.join(home, ".local", "share", "wand")
     elif sys.platform == "darwin":

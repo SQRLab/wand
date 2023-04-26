@@ -3,3 +3,5 @@
 *.pyon
 !wand/examples/*.pyon
 wand/log.txt
+configs/
+configbackups/

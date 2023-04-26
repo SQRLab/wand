@@ -75,6 +75,7 @@ class WandServer:
 
         self.args = args = get_argparser().parse_args()
         init_logger_from_args(args)
+
         self.config = load_config(args, "_server")
         self.lasers = self.config["lasers"].keys()
 
@@ -455,7 +456,7 @@ class WandServer:
             config_path, _ = get_config_path(self.args, "_server")
             pyon.store_file(config_path, self.config)
         except Exception:
-            logger.warning("error when trying to save config data")
+            log.warning("error when trying to save config data")
 
 
 def main():
